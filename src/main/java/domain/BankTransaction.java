@@ -2,15 +2,29 @@ package main.java.domain;
 
 import java.time.LocalDate;
 import java.util.Objects;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 
-@Getter
-@RequiredArgsConstructor
 public class BankTransaction {
   private final LocalDate date;
   private final double amount;
   private final String description;
+
+  public BankTransaction(LocalDate date, double amount, String description) {
+    this.date = date;
+    this.amount = amount;
+    this.description = description;
+  }
+
+  public LocalDate getDate(){
+    return date;
+  }
+
+  public double getAmount(){
+    return amount;
+  }
+
+  public String getDescription(){
+    return description;
+  }
 
   @Override
   public String toString() {
