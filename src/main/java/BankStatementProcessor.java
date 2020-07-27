@@ -1,5 +1,6 @@
 package main.java;
 
+import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
 import main.java.domain.BankTransaction;
@@ -39,5 +40,37 @@ public class BankStatementProcessor {
       }
     }
     return total;
+  }
+
+  public double calculateMaximum(LocalDate date) {
+    double max = 0d;
+    double current = 0d;
+    for(final BankTransaction bankTransaction : bankTransactions){
+      if(bankTransaction.getDate().equals(date)){
+        current = bankTransaction.getAmount();
+
+        if(current > max){
+          max = current;
+        }
+      }
+    }
+
+    return max;
+  }
+
+  public double calculateMinimum(LocalDate date) {
+    double min = 0d;
+    double current = 0d;
+
+    for(final BankTransaction bankTransaction : bankTransactions){
+      if(bankTransaction.getDate().equals(date)){
+        current = bankTransaction.getAmount();
+        if(current < min){
+          min = current;
+        }
+      }
+    }
+
+    return min;
   }
 }
