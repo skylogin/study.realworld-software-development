@@ -45,3 +45,9 @@
 ### 코드 커버리지
 - 테스트 집합이 소프트웨어의 소스코드를 얼마나 테스트했는가를 가리키는 척도
 - 통상 70-90% 정도를 유지하는 것이 바람직함. (100%를 채우는것은 비효율)
+
+### 예외
+- 확인된 예외 (Checked Exception)
+  + Exception
+- 미확인 예외 (Unchecked Exception)
+  + RuntimeException, Error

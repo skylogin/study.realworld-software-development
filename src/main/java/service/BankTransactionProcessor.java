@@ -3,8 +3,10 @@ package main.java.service;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;
+import java.util.DoubleSummaryStatistics;
 import java.util.List;
 import main.java.domain.BankTransaction;
+import main.java.domain.SummaryStatistics;
 import main.java.filter.BankTransactionFilter;
 import main.java.filter.BankTransactionSummarizer;
 
@@ -32,6 +34,17 @@ public class BankTransactionProcessor {
     return findTransactions(bankTransaction -> bankTransaction.getAmount() >= amount);
   }
 
+
+  public SummaryStatistics summarizeTransactions() {
+    final DoubleSummaryStatistics doubleSummaryStatistics = bankTransactions.stream()
+        .mapToDouble(BankTransaction::getAmount)
+        .summaryStatistics();
+
+    return new SummaryStatistics(doubleSummaryStatistics.getSum(),
+        doubleSummaryStatistics.getMax(),
+        doubleSummaryStatistics.getMin(),
+        doubleSummaryStatistics.getAverage());
+  }
 
   public double summarizeTransactions(final BankTransactionSummarizer bankTransactionSummarizer){
     double result = 0d;
