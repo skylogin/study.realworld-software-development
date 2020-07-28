@@ -7,6 +7,10 @@
   + 클래스가 바뀌어야 하는 이유는 오직 하나여야 한다.
 - O: Open/Closed Principle
   + 개방/폐쇄 원칙
+  + 반복 로직과 비지니스 로직의 결합을 제거해야 한다.
+  + 기존 코드를 바꾸지 않으므로 기존 코드가 잘못될 가능성이 줄어든다.
+  + 코드가 중복되지 않으므로 기존 코드의 재사용성이 높아진다.
+  + 결합도가 낮아지므로 코드 유지보수성이 좋아진다.
 - L: Liskov Substitution Principle
   + 리스코프 치환 원칙
 - I: Interface Segregation Principle
