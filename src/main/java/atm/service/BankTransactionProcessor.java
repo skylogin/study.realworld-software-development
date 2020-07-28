@@ -1,14 +1,14 @@
-package main.java.service;
+package main.java.atm.service;
 
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;
 import java.util.DoubleSummaryStatistics;
 import java.util.List;
-import main.java.domain.BankTransaction;
-import main.java.domain.SummaryStatistics;
-import main.java.filter.BankTransactionFilter;
-import main.java.filter.BankTransactionSummarizer;
+import main.java.atm.domain.BankTransaction;
+import main.java.atm.domain.SummaryStatistics;
+import main.java.atm.filter.BankTransactionFilter;
+import main.java.atm.filter.BankTransactionSummarizer;
 
 
 public class BankTransactionProcessor {

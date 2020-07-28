@@ -1,13 +1,12 @@
-package main.java;
+package main.java.atm;
 
 import java.io.IOException;
-import main.java.parser.BankStatementCSVParser;
-import main.java.parser.BankStatementParser;
-import main.java.parser.Exporter;
-import main.java.parser.HtmlExporter;
-import main.java.parser.XmlExporter;
+import main.java.atm.parser.BankStatementCSVParser;
+import main.java.atm.parser.BankStatementParser;
+import main.java.atm.parser.Exporter;
+import main.java.atm.parser.HtmlExporter;
 
-public class MainApplication {
+public class ATMApplication {
   public static void main(final String[] args) throws IOException {
 
     final BankStatementAnalyzer bankStatementAnalyzer = new BankStatementAnalyzer();

@@ -51,3 +51,5 @@
   + Exception
 - 미확인 예외 (Unchecked Exception)
   + RuntimeException, Error
+- 노티피케이션 패턴 (Notification Patter)
+  + 너무 많은 미확인 예외를 사용하는 상황에서 도메인 클래스를 정의해 여러 오류를 수집

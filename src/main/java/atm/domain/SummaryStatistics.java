@@ -1,4 +1,4 @@
-package main.java.domain;
+package main.java.atm.domain;
 
 public class SummaryStatistics {
   private final double sum;

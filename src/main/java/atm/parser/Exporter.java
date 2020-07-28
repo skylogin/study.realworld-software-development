@@ -1,6 +1,6 @@
-package main.java.parser;
+package main.java.atm.parser;
 
-import main.java.domain.SummaryStatistics;
+import main.java.atm.domain.SummaryStatistics;
 
 public interface Exporter {
   String export(SummaryStatistics summaryStatistics);

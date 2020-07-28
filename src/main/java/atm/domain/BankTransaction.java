@@ -1,4 +1,4 @@
-package main.java.domain;
+package main.java.atm.domain;
 
 import java.time.LocalDate;
 import java.util.Objects;

@@ -1,7 +1,7 @@
-package main.java.parser;
+package main.java.atm.parser;
 
 import java.util.List;
-import main.java.domain.BankTransaction;
+import main.java.atm.domain.BankTransaction;
 
 public interface BankStatementParser {
   BankTransaction parseFrom(String line);

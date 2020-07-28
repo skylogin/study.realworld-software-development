@@ -1,10 +1,10 @@
-package test.java.parser;
+package test.java.atm.parser;
 
 import java.time.LocalDate;
 import java.time.Month;
-import main.java.domain.BankTransaction;
-import main.java.parser.BankStatementCSVParser;
-import main.java.parser.BankStatementParser;
+import main.java.atm.domain.BankTransaction;
+import main.java.atm.parser.BankStatementCSVParser;
+import main.java.atm.parser.BankStatementParser;
 import org.junit.Assert;
 import org.junit.Test;
 

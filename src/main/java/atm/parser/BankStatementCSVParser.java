@@ -1,10 +1,10 @@
-package main.java.parser;
+package main.java.atm.parser;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
-import main.java.domain.BankTransaction;
+import main.java.atm.domain.BankTransaction;
 
 public class BankStatementCSVParser implements BankStatementParser{
   private static final DateTimeFormatter DATE_PATTERN = DateTimeFormatter.ofPattern("dd-MM-yyyy");

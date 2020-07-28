@@ -1,18 +1,15 @@
-package main.java;
+package main.java.atm;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.time.LocalDate;
-import java.time.Month;
 import java.util.List;
-import main.java.domain.BankTransaction;
-import main.java.domain.SummaryStatistics;
-import main.java.parser.BankStatementParser;
-import main.java.parser.Exporter;
-import main.java.service.BankTransactionIsInFebruaryAndExpensive;
-import main.java.service.BankTransactionProcessor;
+import main.java.atm.domain.BankTransaction;
+import main.java.atm.domain.SummaryStatistics;
+import main.java.atm.parser.BankStatementParser;
+import main.java.atm.parser.Exporter;
+import main.java.atm.service.BankTransactionProcessor;
 
 public class BankStatementAnalyzer {
 

@@ -1,6 +1,6 @@
-package main.java.filter;
+package main.java.atm.filter;
 
-import main.java.domain.BankTransaction;
+import main.java.atm.domain.BankTransaction;
 
 @FunctionalInterface
 public interface BankTransactionSummarizer{
