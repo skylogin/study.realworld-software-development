@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import main.java.domain.BankTransaction;
 import main.java.filter.BankTransactionFilter;
+import main.java.filter.BankTransactionSummarizer;
 
 
 public class BankTransactionProcessor {
@@ -27,32 +28,29 @@ public class BankTransactionProcessor {
     return result;
   }
 
-  public double calculateTotalAmount(){
-    double total = 0d;
+  public List<BankTransaction> findTransactionsGreaterThanEqual(final int amount){
+    return findTransactions(bankTransaction -> bankTransaction.getAmount() >= amount);
+  }
+
+
+  public double summarizeTransactions(final BankTransactionSummarizer bankTransactionSummarizer){
+    double result = 0d;
     for(final BankTransaction bankTransaction : bankTransactions){
-      total += bankTransaction.getAmount();
+      result += bankTransactionSummarizer.summarize(result, bankTransaction);
     }
-    return total;
+    return result;
+  }
+
+  public double calculateTotalAmount(){
+    return summarizeTransactions((acc, bankTransaction) -> acc+bankTransaction.getAmount());
   }
 
   public double calculateTotalInMonth(final Month month){
-    double total = 0d;
-    for(final BankTransaction bankTransaction : bankTransactions){
-      if(bankTransaction.getDate().getMonth() == month){
-        total += bankTransaction.getAmount();
-      }
-    }
-    return total;
+    return summarizeTransactions((acc, bankTransaction) -> bankTransaction.getDate().getMonth() == month? acc+bankTransaction.getAmount(): acc);
   }
 
   public double calculateTotalForCategory(final String category){
-    double total = 0d;
-    for(final BankTransaction bankTransaction : bankTransactions){
-      if(bankTransaction.getDescription().equals(category)){
-        total += bankTransaction.getAmount();
-      }
-    }
-    return total;
+    return summarizeTransactions((acc, bankTransaction) -> bankTransaction.getDescription().equals(category)? acc+bankTransaction.getAmount(): acc);
   }
 
   public double calculateMaximum(LocalDate date) {
