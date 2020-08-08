@@ -26,4 +26,7 @@
   ex) 명시적 형식: Facts env = new Facts();<br/>
   ex) 형식추론: var env = new Facts();
     + var 키워드를 쓰면 final이 아님
-    
+
+### 빌더패턴 (Builder Pattern)
+- 단순하게 객체를 만드는 방법을 제공
+- 생성자의 파라미터를 분해해서 각각의 파라미터를 받는 여러 메서드로 분리
