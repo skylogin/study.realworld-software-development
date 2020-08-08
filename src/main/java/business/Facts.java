@@ -11,7 +11,7 @@ public class Facts {
     return this.facts.get(name);
   }
 
-  public void addFact(final String name, final String value){
+  public void setFact(String name, String value) {
     this.facts.put(name, value);
   }
 }
