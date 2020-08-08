@@ -10,7 +10,7 @@ public interface TwootRepository {
 
   void delete(Twoot twoot);
 
-//  void query(TwootQuery twootQuery, Consumer<Twoot> callback);
+  void query(TwootQuery twootQuery, Consumer<Twoot> callback);
 
   void clear();
 }
